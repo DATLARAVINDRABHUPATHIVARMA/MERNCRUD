@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
   .catch(err => res.json(err))
 })
 
+app.get('/getUser/:id', (req, res) => {
+  
+})
+
 app.post("/createUser", (req, res) => {
   UserModel.create(req.body)
   .then(users => res.json(users))
