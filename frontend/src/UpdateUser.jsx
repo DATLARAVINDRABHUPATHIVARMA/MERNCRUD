@@ -1,32 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 
 function UpdateUser() {
-  const { id } = useParams()
+  const { id } = useParams();
   const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [age, setAge] = useState();
+  const [country, setCountry] = useState();
+  const [skill, setSkill] = useState();
+  const [baseprice, setBasePrice] = useState();
+  const [finalprice, setFinalPrice] = useState();
+  const [status, setStatus] = useState();
+  const [team, setTeam] = useState();
+  const [year, setYear] = useState();
+
   const navigate = useNavigate();
 
-  useEffect(() => { 
-    axios.get('http://localhost:3001/getUser/'+id)
-    .then(result => {console.log(result)
-      setName(result.data.name)
-      setEmail(result.data.email)
-      setAge(result.data.age)
-    })
-    .catch(err => console.log(err))
-  }, [])
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/getUser/" + id)
+      .then((result) => {
+        console.log(result);
+        setName(result.data.name);
+        setCountry(result.data.country);
+        setSkill(result.data.skill);
+        setBasePrice(result.data.baseprice);
+        setFinalPrice(result.data.finalprice);
+        setStatus(result.data.status);
+        setTeam(result.data.team);
+        setYear(result.data.year);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const Update = (e) => {
     e.preventDefault();
-    axios.put('http://localhost:3001/updateUser/'+id, {name, email, age})
-    .then(result => {
-      console.log(result)
-      navigate('/')
-    })
-    .catch(err => console.log(err))
+    axios
+      .put("http://localhost:3001/updateUser/" + id, { name, email, age })
+      .then((result) => {
+        console.log(result);
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -45,23 +59,73 @@ function UpdateUser() {
             />
           </div>
           <div className="mb-2">
-            <label htmlFor="">Email</label>
+            <label htmlFor="">Country</label>
             <input
-              type="email"
-              placeholder="Enter Email"
+              type="text"
+              placeholder="Enter Name"
               className="form-control"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
             />
           </div>
           <div className="mb-2">
-            <label htmlFor="">Age</label>
+            <label htmlFor="">Skill</label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              className="form-control"
+              value={skill}
+              onChange={(e) => setSkill(e.target.value)}
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="">Base Price</label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              className="form-control"
+              value={baseprice}
+              onChange={(e) => setBasePrice(e.target.value)}
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="">Final Price</label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              className="form-control"
+              value={finalprice}
+              onChange={(e) => setFinalPrice(e.target.value)}
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="">Status</label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              className="form-control"
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="">Team</label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              className="form-control"
+              value={team}
+              onChange={(e) => setTeam(e.target.value)}
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="">Year</label>
             <input
               type="number"
               placeholder="Enter Age"
               className="form-control"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
+              value={year}
+              onChange={(e) => setYear(e.target.value)}
             />
           </div>
           <button className="btn btn-success">Update</button>

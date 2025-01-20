@@ -19,8 +19,8 @@ function Users() {
     .catch(err => console.log(err))
   }
   return (
-    <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
-      <div className="w-50 bg-white rounded p-3">
+    <div className="d-flex vh-full bg-primary justify-content-center align-items-center">
+      <div className="w-80 bg-white rounded p-3">
         <Link to="/create" className="btn btn-success">
           Add +
         </Link>
@@ -28,8 +28,13 @@ function Users() {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Email</th>
-              <th>Age</th>
+              <th>Country</th>
+              <th>Skill</th>
+              <th>Base Price</th>
+              <th>Final Price</th>
+              <th>Status</th>
+              <th>Team</th>
+              <th>Year</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -38,8 +43,13 @@ function Users() {
               return (
                 <tr>
                   <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.age}</td>
+                  <td>{user.country}</td>
+                  <td>{user.skill}</td>
+                  <td>{user.baseprice}</td>
+                  <td>{user.finalprice}</td>
+                  <td>{user.status}</td>
+                  <td>{user.team}</td>
+                  <td>{user.year}</td>
                   <td>
                     <Link to={`/update/${user._id}`} className="btn btn-primary">
                       Update
