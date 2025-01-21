@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
   finalprice: String,
   status: String,
   team: String,
-  Year: Number
+  year: Number
 })
 
 const UserModel = mongoose.model("Users", UserSchema)
