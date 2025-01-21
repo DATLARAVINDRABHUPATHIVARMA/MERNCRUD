@@ -50,7 +50,7 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Name</label>
-            <input
+            <input required
               type="text"
               placeholder="Enter Name"
               className="form-control"
@@ -59,7 +59,7 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
-            <input
+            <input required
               type="text"
               placeholder="Select Country"
               className="form-control"
@@ -68,7 +68,7 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
-            <input
+            <input required
               type="text"
               placeholder="Enter Skill"
               className="form-control"
@@ -94,7 +94,7 @@ function CreateUser() {
             />
             <div className="mb-2">
               <label htmlFor="">Status</label>
-              <input
+              <input required
                 type="text"
                 placeholder="Select Status"
                 className="form-control"
@@ -113,7 +113,7 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Year</label>
-            <input
+            <input required
               type="number"
               placeholder="Select Year"
               className="form-control"

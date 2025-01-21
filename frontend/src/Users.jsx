@@ -27,6 +27,7 @@ function Users() {
         <table className="table">
           <thead>
             <tr>
+              <th>Serial</th>
               <th>Name</th>
               <th>Country</th>
               <th>Skill</th>
@@ -42,6 +43,7 @@ function Users() {
             {users.map((user) => {
               return (
                 <tr>
+                  <td>{user.serial}</td>
                   <td>{user.name}</td>
                   <td>{user.country}</td>
                   <td>{user.skill}</td>

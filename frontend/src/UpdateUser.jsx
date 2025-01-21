@@ -4,6 +4,7 @@ import axios from "axios";
 
 function UpdateUser() {
   const { id } = useParams();
+  const [serial, setSerial] = useState();
   const [name, setName] = useState();
   const [country, setCountry] = useState();
   const [skill, setSkill] = useState();
@@ -20,6 +21,7 @@ function UpdateUser() {
       .get("http://localhost:3001/getUser/" + id)
       .then((result) => {
         console.log(result);
+        setSerial(result.data.serial);
         setName(result.data.name);
         setCountry(result.data.country);
         setSkill(result.data.skill);
@@ -35,7 +37,17 @@ function UpdateUser() {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/updateUser/" + id, { name, email, age })
+      .put("http://localhost:3001/updateUser/" + id, {
+        serial,
+        name,
+        country,
+        skill,
+        baseprice,
+        finalprice,
+        status,
+        team,
+        year
+      })
       .then((result) => {
         console.log(result);
         navigate("/");
@@ -48,6 +60,16 @@ function UpdateUser() {
       <div className="w-50 bg-white rounded p-3">
         <form onSubmit={Update}>
           <h2>Update User</h2>
+          <div className="mb-2">
+            <label htmlFor="">Serial</label>
+            <input
+              type="number"
+              placeholder="Enter Serial"
+              className="form-control"
+              value={serial}
+              onChange={(e) => setSerial(e.target.value)}
+            />
+          </div>
           <div className="mb-2">
             <label htmlFor="">Name</label>
             <input
@@ -121,8 +143,9 @@ function UpdateUser() {
           <div className="mb-2">
             <label htmlFor="">Year</label>
             <input
+              required
               type="number"
-              placeholder="Enter Age"
+              placeholder="Select Year"
               className="form-control"
               value={year}
               onChange={(e) => setYear(e.target.value)}
