@@ -82,7 +82,7 @@ function UpdateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
-            <input
+            <input required
               type="text"
               placeholder="Enter Name"
               className="form-control"
@@ -92,7 +92,7 @@ function UpdateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
-            <input
+            <input required
               type="text"
               placeholder="Enter Name"
               className="form-control"
