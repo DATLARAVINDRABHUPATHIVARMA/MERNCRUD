@@ -46,7 +46,7 @@ function UpdateUser() {
         finalprice,
         status,
         team,
-        year
+        year,
       })
       .then((result) => {
         console.log(result);
@@ -82,7 +82,8 @@ function UpdateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
-            <input required
+            <input
+              required
               type="text"
               placeholder="Enter Name"
               className="form-control"
@@ -92,7 +93,8 @@ function UpdateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
-            <input required
+            <input
+              required
               type="text"
               placeholder="Enter Name"
               className="form-control"
