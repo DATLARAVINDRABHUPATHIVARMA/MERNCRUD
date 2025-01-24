@@ -4,12 +4,12 @@ const UserSchema = new mongoose.Schema({
   serial: Number,
   name: String,
   country: String,
-  skill: String,
+  skill: Array,
   baseprice: String,
   finalprice: String,
-  status: String,
-  team: String,
-  year: Number
+  status: Array,
+  team: Array,
+  year: Array
 })
 
 const UserModel = mongoose.model("Users", UserSchema)
