@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   skill: Array,
   baseprice: String,
   finalprice: String,
-  status: Array,
+  status: String,
   team: Array,
   year: Array
 })

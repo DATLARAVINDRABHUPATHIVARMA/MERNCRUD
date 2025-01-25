@@ -104,12 +104,12 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Team</label>
-            <input
-              type="text"
-              placeholder="Select Team"
-              className="form-control"
-              onChange={(e) => setTeam(e.target.value)}
-            />
+            <select className="form-select" aria-label="Default select example" onChange={(e) => setTeam(e.target.value)}>
+  <option selected>Select Team</option>
+  <option value="1">Royal Challengers Bangalore Women</option>
+  <option value="2">Mumbai Indians Women</option>
+  <option value="3">Delhi Women</option>
+</select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Year</label>
