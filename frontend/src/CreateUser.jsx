@@ -106,9 +106,11 @@ function CreateUser() {
             <label htmlFor="">Team</label>
             <select className="form-select" aria-label="Default select example" onChange={(e) => setTeam(e.target.value)}>
   <option selected>Select Team</option>
-  <option value="1">Royal Challengers Bangalore Women</option>
-  <option value="2">Mumbai Indians Women</option>
-  <option value="3">Delhi Women</option>
+  <option value="Royal Challengers Bangalore Women (RCBW)">Royal Challengers Bangalore Women (RCBW)</option>
+  <option value="Mumbai Indians Women (MIW)">Mumbai Indians Women (MIW)</option>
+  <option value="Delhi Capitals Women (DCW)">Delhi Capitals Women (DCW)</option>
+  <option value="Gujarat Giants Women (GGW)">Gujarat Giants Women (GGW)</option>
+  <option value="UP Warriorz Women (UPWW)">UP Warriorz Women (UPWW)</option>
 </select>
           </div>
           <div className="mb-2">
