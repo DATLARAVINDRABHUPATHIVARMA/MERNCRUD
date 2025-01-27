@@ -41,7 +41,8 @@ function CreateUser() {
           <h2>Add User</h2>
           <div className="mb-2">
             <label htmlFor="">Serial</label>
-            <input required
+            <input
+              required
               type="number"
               placeholder="Enter Serial"
               className="form-control"
@@ -50,7 +51,8 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Name</label>
-            <input required
+            <input
+              required
               type="text"
               placeholder="Enter Name"
               className="form-control"
@@ -59,7 +61,8 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
-            <input required
+            <input
+              required
               type="text"
               placeholder="Select Country"
               className="form-control"
@@ -68,7 +71,8 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
-            <input required
+            <input
+              required
               type="text"
               placeholder="Enter Skill"
               className="form-control"
@@ -94,7 +98,8 @@ function CreateUser() {
             />
             <div className="mb-2">
               <label htmlFor="">Status</label>
-              <input required
+              <input
+                required
                 type="text"
                 placeholder="Select Status"
                 className="form-control"
@@ -104,18 +109,33 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Team</label>
-            <select className="form-select" aria-label="Default select example" onChange={(e) => setTeam(e.target.value)}>
-  <option selected>Select Team</option>
-  <option value="Royal Challengers Bangalore Women (RCBW)">Royal Challengers Bangalore Women (RCBW)</option>
-  <option value="Mumbai Indians Women (MIW)">Mumbai Indians Women (MIW)</option>
-  <option value="Delhi Capitals Women (DCW)">Delhi Capitals Women (DCW)</option>
-  <option value="Gujarat Giants Women (GGW)">Gujarat Giants Women (GGW)</option>
-  <option value="UP Warriorz Women (UPWW)">UP Warriorz Women (UPWW)</option>
-</select>
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              onChange={(e) => setTeam(e.target.value)}
+            >
+              <option selected>Select Team</option>
+              <option value="Royal Challengers Bangalore Women (RCBW)">
+                Royal Challengers Bangalore Women (RCBW)
+              </option>
+              <option value="Mumbai Indians Women (MIW)">
+                Mumbai Indians Women (MIW)
+              </option>
+              <option value="Delhi Capitals Women (DCW)">
+                Delhi Capitals Women (DCW)
+              </option>
+              <option value="Gujarat Giants Women (GGW)">
+                Gujarat Giants Women (GGW)
+              </option>
+              <option value="UP Warriorz Women (UPWW)">
+                UP Warriorz Women (UPWW)
+              </option>
+            </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Year</label>
-            <input required
+            <input
+              required
               type="number"
               placeholder="Select Year"
               className="form-control"
