@@ -115,32 +115,34 @@ function CreateUser() {
               onChange={(e) => setTeam(e.target.value)}
             >
               <option selected>Select Team</option>
-              <option value="Royal Challengers Bangalore Women (RCBW)">
-                Royal Challengers Bangalore Women (RCBW)
-              </option>
-              <option value="Mumbai Indians Women (MIW)">
-                Mumbai Indians Women (MIW)
-              </option>
               <option value="Delhi Capitals Women (DCW)">
                 Delhi Capitals Women (DCW)
               </option>
               <option value="Gujarat Giants Women (GGW)">
                 Gujarat Giants Women (GGW)
               </option>
+              <option value="Mumbai Indians Women (MIW)">
+                Mumbai Indians Women (MIW)
+              </option>
+              <option value="Royal Challengers Bangalore Women (RCBW)">
+                Royal Challengers Bangalore Women (RCBW)
+              </option>
               <option value="UP Warriorz Women (UPWW)">
-                UP Warriorz Women (UPWW)
+                UP Warriorz Women (UPWW) <input type="text" />
               </option>
             </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Year</label>
-            <input
-              required
-              type="number"
-              placeholder="Select Year"
-              className="form-control"
+            <select
+              className="form-select"
+              aria-label="Default select example"
               onChange={(e) => setYear(e.target.value)}
-            />
+            >
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
           </div>
           <button className="btn btn-success">Submit</button>
         </form>
