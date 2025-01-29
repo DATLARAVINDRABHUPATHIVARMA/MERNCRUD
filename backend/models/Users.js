@@ -1,13 +1,17 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
-  serial: Number,
+  serial: {
+    type:Number,
+    index:true,
+    unique:true
+  },
   name: String,
-  country: String,
+  country: Array,
   skill: Array,
   baseprice: String,
   finalprice: String,
-  status: String,
+  status: Array,
   team: Array,
   year: Array
 })

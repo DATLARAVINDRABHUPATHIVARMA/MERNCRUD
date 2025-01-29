@@ -61,13 +61,22 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
-            <input
+            <select
               required
-              type="text"
-              placeholder="Select Country"
-              className="form-control"
+              className="form-select"
+              aria-label="Default select example"
               onChange={(e) => setCountry(e.target.value)}
-            />
+            >
+              <option selected>Select Country</option>
+              <option value="India">India</option>
+              <option value="England">England</option>
+              <option value="Australia">Australia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Africa">South Africa</option>
+            </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
@@ -110,6 +119,7 @@ function CreateUser() {
           <div className="mb-2">
             <label htmlFor="">Team</label>
             <select
+              required
               className="form-select"
               aria-label="Default select example"
               onChange={(e) => setTeam(e.target.value)}
@@ -128,13 +138,15 @@ function CreateUser() {
                 Royal Challengers Bangalore Women (RCBW)
               </option>
               <option value="UP Warriorz Women (UPWW)">
-                UP Warriorz Women (UPWW) <input type="text" />
+                UP Warriorz Women (UPWW)
               </option>
+              <option value=""></option>
             </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Year</label>
             <select
+              required
               className="form-select"
               aria-label="Default select example"
               onChange={(e) => setYear(e.target.value)}
