@@ -61,22 +61,13 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
-            <select
+            <input
               required
-              className="form-select"
-              aria-label="Default select example"
+              type="text"
+              placeholder="Select Country"
+              className="form-control"
               onChange={(e) => setCountry(e.target.value)}
-            >
-              <option selected>Select Country</option>
-              <option value="India">India</option>
-              <option value="England">England</option>
-              <option value="Australia">Australia</option>
-              <option value="South Africa">South Africa</option>
-              <option value="South Africa">South Africa</option>
-              <option value="South Africa">South Africa</option>
-              <option value="South Africa">South Africa</option>
-              <option value="South Africa">South Africa</option>
-            </select>
+            />
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
@@ -140,13 +131,13 @@ function CreateUser() {
               <option value="UP Warriorz Women (UPWW)">
                 UP Warriorz Women (UPWW)
               </option>
-              <option value=""></option>
+              <option value="">
+              </option>
             </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Year</label>
-            <select
-              required
+            <select 
               className="form-select"
               aria-label="Default select example"
               onChange={(e) => setYear(e.target.value)}
