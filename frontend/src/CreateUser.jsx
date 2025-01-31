@@ -61,6 +61,7 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Country</label>
+            <select name="" id=""></select>
             <input
               required
               type="text"
