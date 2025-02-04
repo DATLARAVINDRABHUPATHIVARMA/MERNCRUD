@@ -66,14 +66,25 @@ function CreateUser() {
               className="form-select"
               aria-label="Default select example"
               onChange={(e) => setCountry(e.target.value)}
-            ></select>
-            <input
-              required
-              type="text"
-              placeholder="Select Country"
-              className="form-control"
-              onChange={(e) => setCountry(e.target.value)}
-            />
+            >
+              <option selected>Select Country</option>
+              <option value="India">India</option>
+              <option value="England">England</option>
+              <option value="Australia">Australia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="West Indies">West Indies</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="USA">United States of America</option>
+              <option value="UAE">United Arab Emirates</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Scotland">Scotland</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
@@ -122,19 +133,19 @@ function CreateUser() {
               onChange={(e) => setTeam(e.target.value)}
             >
               <option selected>Select Team</option>
-              <option value="Delhi Capitals Women (DCW)">
+              <option value="Delhi Capitals Women">
                 Delhi Capitals Women (DCW)
               </option>
-              <option value="Gujarat Giants Women (GGW)">
+              <option value="Gujarat Giants Women">
                 Gujarat Giants Women (GGW)
               </option>
-              <option value="Mumbai Indians Women (MIW)">
+              <option value="Mumbai Indians Women">
                 Mumbai Indians Women (MIW)
               </option>
-              <option value="Royal Challengers Bangalore Women (RCBW)">
+              <option value="Royal Challengers Bangalore Women">
                 Royal Challengers Bangalore Women (RCBW)
               </option>
-              <option value="UP Warriorz Women (UPWW)">
+              <option value="UP Warriorz Women">
                 UP Warriorz Women (UPWW)
               </option>
               <option value=""></option>
