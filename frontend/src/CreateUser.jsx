@@ -88,13 +88,18 @@ function CreateUser() {
           </div>
           <div className="mb-2">
             <label htmlFor="">Skill</label>
-            <input
+            <select
               required
-              type="text"
-              placeholder="Enter Skill"
-              className="form-control"
+              className="form-select"
+              aria-label="Default select example"
               onChange={(e) => setSkill(e.target.value)}
-            />
+            >
+              <option selected>Select Skill</option>
+              <option value="Batter">Batter</option>
+              <option value="Bowler">Bowler</option>
+              <option value="All-Rounder">All-Rounder</option>
+              <option value="WK-Batter">WK-Batter</option>
+            </select>
           </div>
           <div className="mb-2">
             <label htmlFor="">Base Price</label>
@@ -154,6 +159,7 @@ function CreateUser() {
           <div className="mb-2">
             <label htmlFor="">Year</label>
             <select
+              required
               className="form-select"
               aria-label="Default select example"
               onChange={(e) => setYear(e.target.value)}

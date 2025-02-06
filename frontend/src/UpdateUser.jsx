@@ -63,6 +63,7 @@ function UpdateUser() {
           <div className="mb-2">
             <label htmlFor="">Serial</label>
             <input
+              required
               type="number"
               placeholder="Enter Serial"
               className="form-control"
@@ -73,6 +74,7 @@ function UpdateUser() {
           <div className="mb-2">
             <label htmlFor="">Name</label>
             <input
+              required
               type="text"
               placeholder="Enter Name"
               className="form-control"
